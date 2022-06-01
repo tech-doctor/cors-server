@@ -6,7 +6,7 @@ const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 8080;
 
 corsProxy.createServer({
-    originWhitelist: [ 'http://localhost:5503/', 'https://gregarious-cheesecake-a1add5.netlify.app/', 'https://sendairtime.netlify.app/'],
+    originWhitelist: ['http://localhost:5503', 'https://gregarious-cheesecake-a1add5.netlify.app', 'https://sendairtime.netlify.app/'],
     requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, () => {
